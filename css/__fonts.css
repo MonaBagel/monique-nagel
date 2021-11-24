@@ -1,0 +1,11 @@
+/* Verdana font */
+@font-face {
+    font-family: Verdana, sans-serif;
+    src: url();
+}
+
+/* Arcade Themed Font */
+@font-face {
+    font-family: 'ArcadeClassic', sans-serif;
+    src: url('http://fonts.cdnfonts.com/css/arcade-classic');
+}
