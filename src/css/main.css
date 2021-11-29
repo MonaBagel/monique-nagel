@@ -1,0 +1,35 @@
+@import './__colours.css';
+@import './__fonts.css';
+
+
+/* Arcade Themed Font */
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('https://fonts.googleapis.com/css?family=Press Start 2P');
+} 
+
+/*==========================
+    COLOUR PALETTE
+============================*/
+:root{
+    --darkBlue: #171F38;
+    --lightDarkBlue: #212B50;
+    --purple: #58375F;
+    --cyan: #068B92;
+    --yellow: #E8D17D;
+    --pink: #AC496F;
+    --blush: #FAEFF4;
+    --white: #FFFFFF;
+}
+
+/*==========================
+  OVERALL
+============================*/
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
