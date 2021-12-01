@@ -1,17 +1,15 @@
-@import './__colours.css';
-@import './__fonts.css';
-
-
 /* Arcade Themed Font */
-@font-face {
+/* @font-face {
     font-family: 'Press Start 2P';
     src: url('https://fonts.googleapis.com/css?family=Press Start 2P');
-} 
-
+}  */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Press Start 2P');
 /*==========================
-    COLOUR PALETTE
+    VARIABLES
 ============================*/
 :root{
+    /* colour palette */
     --darkBlue: #171F38;
     --lightDarkBlue: #212B50;
     --purple: #58375F;
@@ -20,6 +18,13 @@
     --pink: #AC496F;
     --blush: #FAEFF4;
     --white: #FFFFFF;
+
+    /* font family */
+
+
+    /* sizing */
+
+
 }
 
 /*==========================
@@ -33,3 +38,28 @@ body, html{
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+/*==========================
+  SCROLLBAR 
+============================*/
+/* scrollbar width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* scrollbar track */
+::-webkit-scrollbar-track {
+    background: #FAEFF4; 
+}
+
+/* scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #068B92; 
+}
+
+/* scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #E8D17D; 
+}
+
+  
