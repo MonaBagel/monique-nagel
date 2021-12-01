@@ -62,4 +62,10 @@ body{
     background: #E8D17D; 
 }
 
+/*==========================
+  FORM ITEMS 
+============================*/
+textarea{
+    resize: none;
+}
   
