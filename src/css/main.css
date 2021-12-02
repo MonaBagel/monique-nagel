@@ -44,6 +44,14 @@ h1{
 
 h2{
     font-size: 3rem;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 3rem;
+    margin: 0px;
+    margin-bottom: 5px;
 }
 
 p{
@@ -59,12 +67,6 @@ a{
 /*==========================
     LAYOUT
 ============================*/
-/* flex container */
-.flex-container{
-    display: flex !important;
-    justify-content: center !important;
-}
-
 .auto-margin{
     margin-top:auto !important;
     margin-bottom:auto !important;
@@ -74,6 +76,13 @@ a{
     text-align:center !important;
 }
 
+/* flexbox container */
+.flex-container{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* container for web content */
 .content-container{
     width:100%;
     padding-right:0.75rem;
@@ -93,6 +102,7 @@ a{
 
 } */
  
+/* page responsiveness */
 @media(min-width: 576px){
     .content-container{
         max-width:540px
@@ -157,13 +167,6 @@ header h3{
     z-index:999;
     right:15px;
     top:15px;
-    color:var(--cyan);
-    background:transparent;
-    border-radius: 0px;
-}
-
-.nav-toggle:active{
-    color:var(--yellow);
 }
 
 .nav-overlay{
@@ -199,20 +202,9 @@ header h3{
     color: var(--cyan);
 }
 
-
-
-@media screen and (max-height: 450px) {
-    .nav-overlay {
-        overflow-y: auto;
-    }
-    .nav-overlay a {
-        font-size: 20px
-    }
-    .nav-overlay .nav-toggle {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
+.nav-overlay a:hover, .nav-overlay a:focus, .nav-overlay a:active{
+    color: var(--yellow);
+    text-shadow: 0px 0px 20px;
 }
 
 /*==========================
@@ -235,7 +227,6 @@ header h3{
 /* pixel text */
 .pix-text{
     font-family: 'Press Start 2P', serif;
-    letter-spacing: 1px;
     font-size: 1rem;
     text-transform: uppercase;
 }
@@ -305,9 +296,10 @@ header h3{
     font-size: 13px;
     text-decoration:none;
     padding:1.25rem 2.5rem;
-    margin:20px;
+    margin: 20px;
     position: relative;
     z-index:1; 
+    text-transform: uppercase;
 }
 
 a .button:hover, a.button:active{

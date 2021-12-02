@@ -74,9 +74,9 @@
 /*==========================
   SCROLL FUNCTIONS
 ============================*/
+//scroll to top function
 (function ScrollToTop() {
-  "use strict"; // Start of use strict
-
+  "use strict";
   // Scroll to top button appear
   var scrollToTop = document.querySelector('.scroll-to-top');
   if (scrollToTop) {
@@ -92,5 +92,4 @@
       }
     });
   }
-
 })(); // End of use strict
