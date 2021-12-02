@@ -10,21 +10,13 @@
 ============================*/
 :root{
     /* colour palette */
-    --darkBlue: #171F38;
-    --lightDarkBlue: #212B50;
+    --dark: #171F38;
+    --light: #FAEFF4;
+    --darkBlue: #212B50;
     --purple: #58375F;
     --cyan: #068B92;
     --yellow: #E8D17D;
     --pink: #AC496F;
-    --blush: #FAEFF4;
-    --white: #FFFFFF;
-
-    /* font family */
-
-
-    /* sizing */
-
-
 }
 
 /*==========================
@@ -37,7 +29,28 @@ body, html{
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background: var(--light);
+    color: var(--dark);
 }
+
+section{
+    padding: 120px 0px;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin:0;
+}
+
 
 /*==========================
   SCROLLBAR 
@@ -49,23 +62,249 @@ body{
 
 /* scrollbar track */
 ::-webkit-scrollbar-track {
-    background: #FAEFF4; 
+    background: var(--light); 
 }
 
 /* scrollbar handle */
 ::-webkit-scrollbar-thumb {
-    background: #068B92; 
+    background: var(--cyan); 
 }
 
 /* scrollbar handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #E8D17D; 
+    background: var(--yellow); 
+}
+
+
+/*==========================
+  HEADER
+============================*/
+header{
+    height:100vh;
+}
+
+header h1{
+    font-family: 'Press Start 2P', serif;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+header h3{
+    text-shadow: 0px 0px 20px;
+    margin-bottom: 10px;
+}
+
+/*==========================
+  HEADER
+============================*/
+header{
+    height:100vh;
+}
+
+header h1{
+    font-family: 'Press Start 2P', serif;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+header h3{
+    text-shadow: 0px 0px 20px;
+    margin-bottom: 10px;
+}
+
+/*==========================
+  NAVBAR
+============================*/
+.nav-toggle{
+    position:fixed;
+    z-index:999;
+    right:15px;
+    top:15px;
+    color:var(--cyan);
+    background:transparent;
+    border-radius: 0px;
+}
+
+.nav-toggle:focus,.nav-toggle:hover,.nav-toggle:active{
+    color:var(--yellow);
+}
+
+.nav-overlay{
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--dark);
+    background-color: rgba(23,31,56, 0.9);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.nav-overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.nav-overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-family: 'Press Start 2P', serif;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    color: var(--cyan);
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-overlay a:hover, .nav-overlay a:focus, .nav-overlay a:active{
+    color: var(--yellow);
+    text-shadow: 0px 0px 20px;
+}
+
+/*==========================
+  EFFECTS 
+============================*/
+.text-glow{
+    text-shadow: 0px 0px 20px;
+}
+
+.box-glow-cyan{
+    box-shadow: 0px 0px 20px var(--cyan);
+    border-style: none;
+}
+
+.box-glow-pink{
+    box-shadow: 0px 0px 20px var(--pink);
+    border-style: none;
+}
+
+.box-glow-purple{
+    box-shadow: 0px 0px 20px var(--purple);
+    border-style: none;
+}
+
+.box-glow-yellow{
+    box-shadow: 0px 0px 20px var(--yellow);
+    border-style: none;
+}
+
+
+/*==========================
+  TEXT
+============================*/
+/* pixel text */
+.pix-text{
+    font-family: 'Press Start 2P', serif;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* dark text items for light backgrounds */
+.dark-text{ color: var(--dark); }
+
+/* light text items for coloured or dark backgrounds */
+.light-text{ color: var(--light); }
+
+/* blue text items */
+.blue-text{ color: var(--darkBlue); }
+
+/* cyan text items */
+.cyan-text{ color: var(--cyan); }
+
+/* pink text items */
+.pink-text{ color: var(--pink); }
+
+/* purple text items */
+.purple-text{ color: var(--purple); }
+
+/* yellow text items */
+.yellow-text{ color: var(--yellow); }
+
+
+/*==========================
+  ICONS
+============================*/
+
+/* style for icons*/
+.icons{
+    font-size: 30px;
+    text-align:center;
+}
+
+/* creates circle around icon */
+.icon-circle{
+    background-color:var(--light);
+    height:7rem;
+    width:7rem;
+    display:block;
+    border-radius:50% !important;
+    margin: 16px;
+}
+
+
+/*==========================
+  BACKGROUND
+============================*/
+.transparent-bg{ background: transparent; } 
+
+.dark-bg{ background: var(--dark); }
+
+.light-bg{ background: var(--light); }
+
+.blue-bg{ background: var(--darkBlue); }
+
+.cyan-bg{ background: var(--cyan); }
+
+.pink-bg{ background: var(--pink); }
+
+.purple-bg{ background: var(--purple); }
+
+.yellow-bg{ background: var(--yellow); }
+
+
+/*==========================
+  BUTTONS
+============================*/
+.button{
+    font-family: 'Press Start 2P', serif;
+    box-shadow: 0px 0px 20px;
+    border-style: none;
+    font-size: 13px;
+    padding: 15px;
 }
 
 /*==========================
   FORM ITEMS 
 ============================*/
+.form-control{
+    border-width: 0px;
+    border-radius: 0px;
+}
+
 textarea{
     resize: none;
+}
+
+/*==========================
+  FOOTER
+============================*/
+footer p{
+    font-family: 'Press Start 2P', serif;
+    color:#868e96 !important;
+    opacity: 1;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding: 10px;
 }
   

@@ -15,17 +15,63 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- CSS File -->
         <link rel="stylesheet" href="src/css/main.css">
+
+        <!-- js code to memorise scroll position on refresh -->
+        <script type="text/javascript">
+            function refreshPage () {
+                var page_y = document.getElementsByTagName("body")[0].scrollTop;
+                window.location.href = window.location.href.split('?')[0] + '?page_y=' + page_y;
+            }
+            window.onload = function () {
+                setTimeout(refreshPage, 35000);
+                if ( window.location.href.indexOf('page_y') != -1 ) {
+                    var match = window.location.href.split('?')[1].split("&")[0].split("=");
+                    document.getElementsByTagName("body")[0].scrollTop = match[1];
+                }
+            }
+        </script>
+
+
     </head>
     
-    <body>
+    <body id="page-top">
+
+        <nav class="nav-overlay">
+            <a class="nav-toggle" href="#">
+                <i class="icons text-glow fa fa-bars"></i>
+            </a>
+            <div class="nav-overlay-content">
+                <a class="" href="#intro">Introduction</a>
+                <a class="" href="#personal">Personal Interests</a>
+                <a class="" href="#skills">Skills &amp; Tools</a>
+                <a class="" href="#portfolio">Portfolio</a>
+                <a class="" href="#testimonials">Testimonials</a>
+                <a class="" href="#contact">Contact</a>
+                
+            </div>
+        </nav>
         
-        <h1>Technical CV</h1>
+        <header class="d-flex dark-bg">
+            <div class="container my-auto text-center">
+                <h3>
+                    <em class="yellow-text">Hello, I am&nbsp;</em>
+                </h3>
+                <h1 class="d-flex justify-content-center justify-content-sm-center text-glow pink-text">MONIQUE NAGEL</h1>
+                <div>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger dark-text button cyan-bg box-glow-cyan" 
+                        role="button" 
+                        href="#intro">
+                        START
+                    </a>
+                </div>
+            </div>
+        </header>
 
 
 
 
 
-
+        <script src="src/js/main.js"></script>
 
     </body>
 
