@@ -13,8 +13,7 @@
   OVERALL
 ============================*/
 *,*::before,*::after{
-    box-sizing:border-box;
-    /* margin:0; */
+    box-sizing:border-box
 }
 
 body, html{
@@ -36,7 +35,7 @@ section{
 
 div{
     text-align:center !important;
-    margin-bottom: .5rem;
+    margin-bottom: 20px;
 }
 
 h1{
@@ -51,6 +50,10 @@ p{
     font-size: 1.2rem;
     line-height: 2rem;
     margin:0px 0px 30px;
+}
+
+a{
+    text-decoration: none;
 }
 
 /*==========================
@@ -260,7 +263,8 @@ header h3{
 ============================*/
 /* style for icons*/
 .icons{
-    font-size: 30px;
+    font-size: 35px;
+    margin:auto;
     text-align:center;
 }
 /* creates circle around icon */
@@ -268,9 +272,10 @@ header h3{
     background-color:var(--light);
     height:7rem;
     width:7rem;
-    display:block;
     border-radius:50% !important;
     margin: 16px;
+    align-items: center;
+    display: flex;
 }
 
 
@@ -346,6 +351,25 @@ textarea{
 /*==========================
   FOOTER
 ============================*/
+footer{
+    padding:0px;
+}
+
+.socials-group{
+    margin-top: 30px;
+    padding-left:0;
+    list-style:none;
+}
+
+.socials-circle{
+    height:3.5rem;
+    width:3.5rem;
+    border-radius:50% !important;
+    margin: 10px;
+    align-items: center;
+    display: flex;
+}
+
 footer p{
     font-family: 'Press Start 2P', serif;
     color:#868e96 !important;
@@ -353,4 +377,5 @@ footer p{
     font-size: 0.7rem;
     line-height: 1rem;
     padding: 10px;
+    margin:0px;
 }
