@@ -1,13 +1,3 @@
-/* Arcade Themed Font */
-/* @font-face {
-    font-family: 'Press Start 2P';
-    src: url('https://fonts.googleapis.com/css?family=Press Start 2P');
-}  */
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Press Start 2P');
-/*==========================
-    VARIABLES
-============================*/
 :root{
     /* colour palette */
     --dark: #171F38;
@@ -22,19 +12,31 @@
 /*==========================
   OVERALL
 ============================*/
+*,*::before,*::after{
+    box-sizing:border-box;
+    /* margin:0; */
+}
+
 body, html{
     width: 100%;
     height: 100%;
 }
 
 body{
+    margin:0;
     font-family: 'Montserrat', sans-serif;
     background: var(--light);
     color: var(--dark);
+    -webkit-text-size-adjust: 100%;
 }
 
 section{
     padding: 120px 0px;
+}
+
+div{
+    text-align:center !important;
+    margin-bottom: .5rem;
 }
 
 h1{
@@ -48,33 +50,80 @@ h2{
 p{
     font-size: 1.2rem;
     line-height: 2rem;
-    margin:0;
+    margin:0px 0px 30px;
+}
+
+/*==========================
+    LAYOUT
+============================*/
+/* flex container */
+.flex-container{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.auto-margin{
+    margin-top:auto !important;
+    margin-bottom:auto !important;
+}
+
+.center-text{
+    text-align:center !important;
+}
+
+.content-container{
+    width:100%;
+    padding-right:0.75rem;
+    padding-left: 0.75rem;
+    margin-right:auto;
+    margin-left:auto;
+    border-style: none;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+/* .grid-item{
+
+} */
+ 
+@media(min-width: 576px){
+    .content-container{
+        max-width:540px
+    }
+}
+@media(min-width: 768px){
+    .content-container{
+    max-width:720px
+    }
+}
+@media(min-width: 992px){
+    .content-container{
+        max-width:960px
+    }
+}
+@media(min-width: 1200px){
+    .content-container{
+        max-width:1140px
+    }
+}
+@media(min-width: 1400px){
+    .content-container{
+        max-width:1320px
+    }
 }
 
 
 /*==========================
   SCROLLBAR 
 ============================*/
-/* scrollbar width */
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-/* scrollbar track */
-::-webkit-scrollbar-track {
-    background: var(--light); 
-}
-
-/* scrollbar handle */
-::-webkit-scrollbar-thumb {
-    background: var(--cyan); 
-}
-
-/* scrollbar handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--yellow); 
-}
-
+::-webkit-scrollbar{ width: 6px; }
+::-webkit-scrollbar-track{ background: var(--light); }
+::-webkit-scrollbar-thumb { background: var(--cyan); }
+::-webkit-scrollbar-thumb:hover { background: var(--yellow); }
 
 /*==========================
   HEADER
@@ -85,33 +134,14 @@ header{
 
 header h1{
     font-family: 'Press Start 2P', serif;
-    letter-spacing: 1px;
-    font-size: 3rem;
+    font-size: 10vw;
     padding: 30px;
     text-transform: uppercase;
+    margin-top: 0px;
 }
 
 header h3{
-    text-shadow: 0px 0px 20px;
-    margin-bottom: 10px;
-}
-
-/*==========================
-  HEADER
-============================*/
-header{
-    height:100vh;
-}
-
-header h1{
-    font-family: 'Press Start 2P', serif;
-    letter-spacing: 1px;
-    font-size: 3rem;
-    padding: 30px;
-    text-transform: uppercase;
-}
-
-header h3{
+    font-size: 1.5rem;
     text-shadow: 0px 0px 20px;
     margin-bottom: 10px;
 }
@@ -129,7 +159,7 @@ header h3{
     border-radius: 0px;
 }
 
-.nav-toggle:focus,.nav-toggle:hover,.nav-toggle:active{
+.nav-toggle:active{
     color:var(--yellow);
 }
 
@@ -137,14 +167,15 @@ header h3{
     height: 0%;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 998;
     top: 0;
     left: 0;
     background-color: var(--dark);
     background-color: rgba(23,31,56, 0.9);
     overflow-x: hidden;
     overflow-y: hidden;
-    transition: 0.5s;
+    transition:all .4s ease 0s;
+    display: block;
 }
 
 .nav-overlay-content{
@@ -152,18 +183,17 @@ header h3{
     top: 25%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
 }
 
 .nav-overlay a{
-    padding: 8px;
     text-decoration: none;
     font-family: 'Press Start 2P', serif;
-    letter-spacing: 1px;
-    font-size: 2rem;
-    color: var(--cyan);
+    font-size: 1.5rem;
     display: block;
-    transition: 0.3s;
+    padding: 15px;
+    text-decoration:none;
+    transition:all .4s ease 0s;
+    color: var(--cyan);
 }
 
 .nav-overlay a:hover, .nav-overlay a:focus, .nav-overlay a:active{
@@ -171,32 +201,32 @@ header h3{
     text-shadow: 0px 0px 20px;
 }
 
+@media screen and (max-height: 450px) {
+    .nav-overlay {
+        overflow-y: auto;
+    }
+    .nav-overlay a {
+        font-size: 20px
+    }
+    .nav-overlay .nav-toggle {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
 /*==========================
   EFFECTS 
 ============================*/
-.text-glow{
-    text-shadow: 0px 0px 20px;
-}
+.text-glow{ text-shadow: 0px 0px 20px; }
 
-.box-glow-cyan{
-    box-shadow: 0px 0px 20px var(--cyan);
-    border-style: none;
-}
+.box-glow-cyan{ box-shadow: 0px 0px 20px var(--cyan); }
 
-.box-glow-pink{
-    box-shadow: 0px 0px 20px var(--pink);
-    border-style: none;
-}
+.box-glow-pink{ box-shadow: 0px 0px 20px var(--pink); }
 
-.box-glow-purple{
-    box-shadow: 0px 0px 20px var(--purple);
-    border-style: none;
-}
+.box-glow-purple{ box-shadow: 0px 0px 20px var(--purple); }
 
-.box-glow-yellow{
-    box-shadow: 0px 0px 20px var(--yellow);
-    border-style: none;
-}
+.box-glow-yellow{ box-shadow: 0px 0px 20px var(--yellow); }
 
 
 /*==========================
@@ -210,38 +240,29 @@ header h3{
     text-transform: uppercase;
 }
 
-/* dark text items for light backgrounds */
 .dark-text{ color: var(--dark); }
 
-/* light text items for coloured or dark backgrounds */
 .light-text{ color: var(--light); }
 
-/* blue text items */
 .blue-text{ color: var(--darkBlue); }
 
-/* cyan text items */
 .cyan-text{ color: var(--cyan); }
 
-/* pink text items */
 .pink-text{ color: var(--pink); }
 
-/* purple text items */
 .purple-text{ color: var(--purple); }
 
-/* yellow text items */
 .yellow-text{ color: var(--yellow); }
 
 
 /*==========================
   ICONS
 ============================*/
-
 /* style for icons*/
 .icons{
     font-size: 30px;
     text-align:center;
 }
-
 /* creates circle around icon */
 .icon-circle{
     background-color:var(--light);
@@ -278,18 +299,44 @@ header h3{
 ============================*/
 .button{
     font-family: 'Press Start 2P', serif;
-    box-shadow: 0px 0px 20px;
     border-style: none;
     font-size: 13px;
-    padding: 15px;
+    text-decoration:none;
+    padding:1.25rem 2.5rem;
+    margin:20px;
+    position: relative;
+    z-index:1; 
 }
+
+a .button:hover, a.button:active{
+    border: 3px inset var(--dark);
+} 
+
 
 /*==========================
   FORM ITEMS 
 ============================*/
-.form-control{
+.form-item{
+    padding: padding 5px;
+}
+
+.form-ctrl{
+    display:block;
+    width:100%;
+    padding:.3rem .7rem;
+    font-size:1rem;
+    line-height:1.5;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
     border-width: 0px;
     border-radius: 0px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-ctrl:focus{
+    outline:0;
+    box-shadow: 0px 0px 20px var(--yellow);
 }
 
 textarea{
@@ -307,4 +354,3 @@ footer p{
     line-height: 1rem;
     padding: 10px;
 }
-  
