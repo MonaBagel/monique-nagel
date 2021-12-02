@@ -199,10 +199,7 @@ header h3{
     color: var(--cyan);
 }
 
-.nav-overlay a:hover, .nav-overlay a:focus, .nav-overlay a:active{
-    color: var(--yellow);
-    text-shadow: 0px 0px 20px;
-}
+
 
 @media screen and (max-height: 450px) {
     .nav-overlay {
@@ -321,6 +318,11 @@ a .button:hover, a.button:active{
 /*==========================
   FORM ITEMS 
 ============================*/
+form{
+    width: 480px;
+    min-width: 50%;
+}
+
 .form-item{
     padding: padding 5px;
 }
@@ -378,4 +380,11 @@ footer p{
     line-height: 1rem;
     padding: 10px;
     margin:0px;
+}
+
+.scroll-to-top{
+    position:fixed;
+    right:15px;
+    bottom:15px;
+    display:none;
 }
