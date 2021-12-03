@@ -71,6 +71,8 @@
   }
 })(); // End of use strict
 
+
+
 /*==========================
   SCROLL FUNCTIONS
 ============================*/
@@ -85,11 +87,14 @@
     window.addEventListener('scroll', function() {
       var scrollDistance = window.pageYOffset;
 
-      if (scrollDistance > 100) {
+      if (scrollDistance > 150) {
         scrollToTop.style.display = 'block';
       } else {
-      scrollToTop.style.display = 'none';
+        scrollToTop.style.display = 'none';
       }
+
     });
   }
 })(); // End of use strict
+
+

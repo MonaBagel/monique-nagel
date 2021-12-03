@@ -21,6 +21,10 @@ body, html{
     height: 100%;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin:0;
     font-family: 'Montserrat', sans-serif;
@@ -54,7 +58,7 @@ h3{
     margin-bottom: 5px;
 }
 
-p{
+p, figure{
     font-size: 1.2rem;
     line-height: 2rem;
     margin:0px 0px 30px;

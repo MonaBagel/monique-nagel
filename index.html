@@ -14,17 +14,18 @@
         <!-- CSS File -->
         <link rel="stylesheet" href="src/css/main.css">
 
-        <!-- js code to memorise scroll position on refresh -->
+        <!-- save scroll position on refresh -->
         <script type="text/javascript">
             function refreshPage () {
                 var page_y = document.getElementsByTagName("body")[0].scrollTop;
                 window.location.href = window.location.href.split('?')[0] + '?page_y=' + page_y;
-            }
-            window.onload = function () {
-                setTimeout(refreshPage, 35000);
-                if ( window.location.href.indexOf('page_y') != -1 ) {
-                    var match = window.location.href.split('?')[1].split("&")[0].split("=");
-                    document.getElementsByTagName("body")[0].scrollTop = match[1];
+
+                window.onload = function () {
+                    setTimeout(refreshPage, 35000);
+                    if ( window.location.href.indexOf('page_y') != -1 ) {
+                        var match = window.location.href.split('?')[1].split("&")[0].split("=");
+                        document.getElementsByTagName("body")[0].scrollTop = match[1];
+                    }
                 }
             }
         </script>
@@ -72,8 +73,7 @@
                                 I take a lot of pride in my work and I tend to have high standards for myself when achieving goals.<br>
                                 I also enjoy seeing the fruits of my labour especially after a long struggle.<br>
                             </p>
-
-                            <a class="button light-text purple-bg" role="button" href="">Resume</a>
+                            <a class="button light-text purple-bg" role="button" href="src/assets/pdfs/Monique_Nagel_Resume.pdf" download="Monique_Nagel_Resume" target="_blank">Resume</a>
                         </div>
                     </div>
                 </div>
@@ -92,8 +92,26 @@
 
             </section>
 
-            <section id="testimonials">
-
+            <section id="testimonials" class="flex-container transparent-bg">
+                <div class="content-container center-text">
+                    <div class="">
+                        <h3 class="pix-text text-glow cyan-text">Recommendation</h3>
+                        <h2>Testimonials</h2>
+                    </div>
+                    <div class="">
+                        <div class="content-container">
+                            <figure>
+                                <blockquote class="blockquote">
+                                    <p class="dark-text">
+                                        Monique was my student in 2019 and impressed me with her wide-ranging intellectual curiosity, passion for work/life, budding leadership skills and audacious spirit.<br>
+                                    </p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer"><strong>Lance Bunt, Lecturer at NWU</strong></figcaption>
+                            </figure>
+                            <a class="button light-text cyan-bg" role="button" href="src/assets/pdfs/Monique_Recommendation.pdf" download="Monique_Nagel_Recommendation" target="_blank">View</a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="contact">
