@@ -61,12 +61,12 @@
         <main>
             <section id="intro" class="flex-container transparent-bg">
                 <div class="content-container center-text">
-                    <div class="">
+                    <div class="heading">
                         <h3 class="pix-text text-glow purple-text">Introduction</h3>
                         <h2>About Me</h2>
                     </div>
-                    <div class="">
-                        <div class="auto-margin content-container">
+                    <div class="content">
+                        <div class="content-container auto-margin ">
                             <p>
                                 I am a South African software developer that is passionate about learning more about any topic that catches my interest.<br>
                                 I aspire to learn as much as I can in order to improve my skills and my capabilities as a problem solver.<br>
@@ -81,25 +81,25 @@
 
             </section>
 
-            <section id="personal">
+            <section id="personal" class="flex-container purple-bg">
 
             </section>
 
-            <section id="skills">
+            <section id="skills" class="flex-container transparent-bg">
 
             </section>
 
-            <section id="portfolio">
+            <section id="portfolio" class="flex-container pink-bg">
 
             </section>
 
             <section id="testimonials" class="flex-container transparent-bg">
-                <div class="content-container center-text">
-                    <div class="">
+                <div class="content-container auto-margin  center-text">
+                    <div class="heading">
                         <h3 class="pix-text text-glow cyan-text">Recommendation</h3>
                         <h2>Testimonials</h2>
                     </div>
-                    <div class="">
+                    <div class="content">
                         <div class="content-container">
                             <figure>
                                 <blockquote class="blockquote">
@@ -107,7 +107,7 @@
                                         Monique was my student in 2019 and impressed me with her wide-ranging intellectual curiosity, passion for work/life, budding leadership skills and audacious spirit.<br>
                                     </p>
                                 </blockquote>
-                                <figcaption class="blockquote-footer"><strong>Lance Bunt, Lecturer at NWU</strong></figcaption>
+                                <figcaption class="blockquote-footer grey-text"><strong>- Lance Bunt, Lecturer at NWU</strong></figcaption>
                             </figure>
                             <br>
                             <a class="button light-text cyan-bg box-glow-cyan" role="button" href="src/assets/pdfs/Monique_Recommendation.pdf" download="Monique_Nagel_Recommendation" target="_blank">View</a>
@@ -116,27 +116,47 @@
                 </div>
             </section>
 
-            <section id="contact">
-
+            <section id="contact" class="flex-container blue-bg">
+                <div class="content-container auto-margin center-text">
+                    <div class="heading">
+                        <h3 class="pix-text yellow-text text-glow">Contact</h3>
+                        <h2 class="light-text">Send Me A Message</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content-container flex-container">
+                            <form method="post">
+                                <div class="form-item">
+                                    <input class="form-ctrl light-text dark-bg" type="text" name="name" placeholder="Name" ></div>
+                                <div class="form-item">
+                                    <input class="form-ctrl light-text dark-bg" type="email" name="email" placeholder="Email">
+                                </div>
+                                <div class="form-item">
+                                    <textarea class="form-ctrl light-text dark-bg" name="message" placeholder="Your Message" rows="7" spellcheck="true"></textarea>
+                                </div>
+                                <br>
+                                <a class="button yellow-bg blue-text box-glow-yellow" role="button" href="#contact">Submit</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </section>
-
         </main>
 
         <footer class="flex-container center-text dark-bg">
             <div class="content-container">
                 <ul class="flex-container socials-group">
-                    <li class="">
+                    <li>
                         <a class="socials-circle yellow-text box-glow-yellow yellow-bg" href="https://www.linkedin.com/in/monique-nagel-ba2a2b1a5/" target="_blank">
                             <i class="icons dark-text fa">&#xf0e1;</i>
                         </a>
                     </li>
-                    <li class="">
+                    <li>
                         <a class="socials-circle yellow-text box-glow-yellow yellow-bg" href="https://github.com/MonaBagel" target="_blank">
                             <i class="icons dark-text fa">&#xf09b;</i>
                         </a>
                     </li>
                 </ul>
-                <p class="text-glow">Monique Nagel © 2021</p>
+                <p class="grey-text text-glow">Monique Nagel © 2021</p>
 
                 <!-- fixed scroll to top button -->
                 <a class="scroll-to-top transparent-bg" href="#page-top">

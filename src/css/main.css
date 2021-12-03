@@ -2,6 +2,7 @@
     /* colour palette */
     --dark: #171F38;
     --light: #FAEFF4;
+    --grey: #868e96;
     --darkBlue: #212B50;
     --purple: #58375F;
     --cyan: #068B92;
@@ -58,7 +59,7 @@ h3{
     margin-bottom: 5px;
 }
 
-p, figure{
+p, figure, form{
     font-size: 1.2rem;
     line-height: 2rem;
     margin:0px 0px 30px;
@@ -236,6 +237,9 @@ header h3{
 
 .yellow-text{ color: var(--yellow); }
 
+.grey-text{ color:var(--grey); }
+
+.blockquote-footer{ font-size:1rem; }
 
 /*==========================
   ICONS
@@ -327,6 +331,7 @@ textarea{
     resize: none;
 }
 
+
 /*==========================
   FOOTER
 ============================*/
@@ -349,11 +354,9 @@ footer{
     display: flex;
 }
 
-
-
 footer p{
     font-family: 'Press Start 2P', serif;
-    color:#868e96 !important;
+    color:var(--grey) !important;
     opacity: 1;
     font-size: 0.7rem;
     line-height: 1rem;
