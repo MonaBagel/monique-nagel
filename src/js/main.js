@@ -4,23 +4,28 @@
 
 
 
-
-
-
-
 /*==========================
-  HEADER BACKGROUND
+  SCROLL FUNCTIONS
 ============================*/
+(function ScrollToTop() {
+  "use strict";
+  // Scroll to top button appear
+  var scrollToTop = document.querySelector('.scroll-to-top');
+  if (scrollToTop) {
+  
+    // Scroll to top button appear
+    window.addEventListener('scroll', function() {
+      var scrollDistance = window.pageYOffset;
 
+      if (scrollDistance > 150) {
+        scrollToTop.style.display = 'block';
+      } else {
+        scrollToTop.style.display = 'none';
+      }
 
-
-
-
-
-
-/*==========================
-  CAROUSEL
-============================*/
+    });
+  }
+})(); // End of use strict
 
 
 /*==========================
@@ -72,29 +77,53 @@
 })(); // End of use strict
 
 
+/*==========================
+  HEADER BACKGROUND
+============================*/
+
+
+
+
+
+
 
 /*==========================
-  SCROLL FUNCTIONS
+  CAROUSEL
 ============================*/
-//scroll to top function
-(function ScrollToTop() {
-  "use strict";
-  // Scroll to top button appear
-  var scrollToTop = document.querySelector('.scroll-to-top');
-  if (scrollToTop) {
+(function Carousel(){
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
   
-    // Scroll to top button appear
-    window.addEventListener('scroll', function() {
-      var scrollDistance = window.pageYOffset;
-
-      if (scrollDistance > 150) {
-        scrollToTop.style.display = 'block';
-      } else {
-        scrollToTop.style.display = 'none';
-      }
-
-    });
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-})(); // End of use strict
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slides");
+    var indicators = document.getElementsByClassName("indicator");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < indicators.length; i++) {
+        indicators[i].className = indicators[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    indicators[slideIndex-1].className += " active";
+  }
+
+
+})();
+
+
+
+
 
 
