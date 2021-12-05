@@ -71,7 +71,6 @@
           navOverlay.style.height = "100%";//shows nav menu
         }
       }
-
     });
   }
 })(); // End of use strict

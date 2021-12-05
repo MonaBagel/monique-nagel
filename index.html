@@ -36,14 +36,14 @@
             <a class="nav-toggle transparent-bg" href="#">
                 <i class="icons cyan-text text-glow fa fa-bars cyan-text"></i>
             </a>
-            <div class="nav-overlay-content">
-                <a href="#intro">Introduction</a>
-                <a href="#personal">Personal Interests</a>
-                <a href="#skills">Skills &amp; Tools</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
-                
+            <div id="nav-menu" class="nav-overlay-content">
+                <a class="nav-item" href="#page-top">Home</a>
+                <a class="nav-item" href="#intro">Introduction</a>
+                <a class="nav-item" href="#personal">Personal Interests</a>
+                <a class="nav-item" href="#skills">Skills &amp; Tools</a>
+                <a class="nav-item" href="#portfolio">Portfolio</a>
+                <a class="nav-item" href="#testimonials">Testimonials</a>
+                <a class="nav-item" href="#contact">Contact</a>
             </div>
         </nav>
         
@@ -86,45 +86,52 @@
                         <h3 class="pix-text text-glow yellow-text">Personal Interests</h3>
                         <h2 class="light-text">Get To Know Me</h2>
                     </div>
-                    <div class="content">
+                    <div class="content row">
                         <div class="content-container auto-margin ">
                             <div class="slideshow-container flex-container">
-                                <div class="slides fade slideContent">
-                                    <div class="center-text">
-                                        <span>
-                                            <i class="icons cyan-text text-glow icon-circle box-glow-yellow fa">&#xf1fc;</i>
-                                        </span>
-                                        <p class="light-text">I enjoy partaking in activities such as designing, drawing and creative writing; to indulge more into my creative side.
-                                            <br>
-                                        </p>
+                                <div class="control-column">
+                                    <a class="prev" onclick="plusSlides(-1)">
+                                        <i class="icons yellow-text text-glow fa">&#xf0a8;</i>
+                                    </a>
+                                </div>
+
+                                <div class="column">
+                                    <div class="slides fade slideContent">
+                                        <div class="center-text">
+                                            <span>
+                                                <i class="icons cyan-text text-glow icon-circle box-glow-yellow fa">&#xf1fc;</i>
+                                            </span>
+                                            <p class="light-text">I enjoy partaking in activities such as designing, drawing and creative writing; to indulge more into my creative side.
+                                                <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slides fade slideContent">
+                                        <div class="center-text">
+                                            <span>
+                                                <i class="icons cyan-text text-glow icon-circle box-glow-yellow fa">&#xf02d;</i>
+                                            </span>
+                                            <p class="light-text">I delight in learning more about anything that interests me whether it be a random fact or acquiring a new skill.
+                                                <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slides fade slideContent">
+                                        <div class="center-text">
+                                            <span>
+                                                <i class="icons cyan-text text-glow icon-circle box-glow-yellow fa">&#xf086;</i>
+                                            </span>
+                                            <p class="light-text">I have a fondness of discussing and analysing various topics such as absurd concepts, books, movies, music,&nbsp;philosophy, poetry or any topic that interest me.
+                                                <br>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="slides fade slideContent">
-                                    <div class="center-text">
-                                        <span>
-                                            <i class="icons cyan-text text-glow icon-circle box-glow-yellow fa">&#xf02d;</i>
-                                        </span>
-                                        <p class="light-text">I delight in learning more about anything that interests me whether it be a random fact or acquiring a new skill.
-                                            <br>
-                                        </p>
-                                    </div>
+                                <div class="control-column">
+                                    <a class="next" onclick="plusSlides(1)">
+                                        <i class="icons yellow-text text-glow fa">&#xf0a9;</i>
+                                    </a>
                                 </div>
-                                <div class="slides fade slideContent">
-                                    <div class="center-text">
-                                        <span>
-                                            <i class="icons cyan-text text-glow icon-circle box-glow-yellow fa">&#xf086;</i>
-                                        </span>
-                                        <p class="light-text">I have a fondness of discussing and analysing various topics such as absurd concepts, books, movies, music,&nbsp;philosophy, poetry or any topic that interest me.
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <a class="prev" onclick="plusSlides(-1)">
-                                    <i class="icons yellow-text text-glow fa">&#xf0a8;</i>
-                                </a>
-                                <a class="next" onclick="plusSlides(1)">
-                                    <i class="icons yellow-text text-glow fa">&#xf0a9;</i>
-                                </a>
                             </div>
                             
                             <div class="center-text">
