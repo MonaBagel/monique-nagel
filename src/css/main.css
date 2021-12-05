@@ -82,13 +82,11 @@ a{
     text-align: center;
 }
 
-/* flexbox container */
 .flex-container{
     display: flex !important;
     justify-content: center !important;
 }
 
-/* container for web content */
 .content-container{
     width:100%;
     padding-right: 1.5rem;
@@ -100,7 +98,6 @@ a{
  
 .row{
     display: flex;
-    /* height:inherit; */
 }
 
 .column{
@@ -194,7 +191,6 @@ header h3{
 /*==========================
     TEXT
 ============================*/
-/* pixel text */
 .pix-text{
     font-family: 'Press Start 2P', serif;
     font-size: 1rem;
@@ -469,7 +465,6 @@ footer p{
         max-width:1320px
     }
 }
-
 @media screen and (max-width: 600px) {
     .column {
       width: 100%;
