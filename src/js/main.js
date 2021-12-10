@@ -34,6 +34,7 @@
 (function Navbar() {
   "use strict"; // Start of use strict
 
+  //BUTTON CHANGE TOGGLE
   var navbarToggle = document.querySelector('.nav-toggle');
   var navOverlay = document.querySelector('.nav-overlay');
   

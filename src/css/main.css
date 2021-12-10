@@ -414,6 +414,14 @@ footer p{
     right:15px;
     bottom:15px;
     display:none;
+    border-radius:50% !important;
+    border: 3px inset var(--dark);
+    background: var(--dark);
+    padding: 0px 1px;
+
+    text-align:center;
+    font-weight: bold;
+    margin:auto;
 }
 
 /*==========================
