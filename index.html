@@ -56,7 +56,6 @@
                 </div>
         </header>
 
-
         <main>
             <section id="intro" class="flex-container transparent-bg">
                 <div class="content-container center-text">
@@ -214,17 +213,18 @@
                     </div>
                     <div class="content">
                         <div class="content-container flex-container">
-                            <form method="post">
+                            <form id="contact-form" method="post">
                                 <div class="form-item">
-                                    <input class="form-ctrl light-text dark-bg" type="text" name="name" placeholder="Name" ></div>
-                                <div class="form-item">
-                                    <input class="form-ctrl light-text dark-bg" type="email" name="email" placeholder="Email">
+                                    <input class="form-ctrl light-text dark-bg" type="text" placeholder="Name" name="sender-name" >
                                 </div>
                                 <div class="form-item">
-                                    <textarea class="form-ctrl light-text dark-bg" name="message" placeholder="Your Message" rows="7" spellcheck="true"></textarea>
+                                    <input class="form-ctrl light-text dark-bg" type="email" placeholder="Email" name="sender-email" >
+                                </div>
+                                <div class="form-item">
+                                    <textarea class="form-ctrl light-text dark-bg" placeholder="Your Message" rows="7" spellcheck="true" name="sender-message" ></textarea>
                                 </div>
                                 <br>
-                                <a class="button yellow-bg blue-text box-glow-yellow" role="button" href="#contact">Submit</a>
+                                <a class="button yellow-bg blue-text box-glow-yellow" role="button" type="submit">Submit</a>
                             </form>
                         </div>
                     </div>
